@@ -1,0 +1,15 @@
+personal-digest-preferences SHA512
+cert-digest-algo SHA512
+default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
+
+keyid-format 0xlong
+
+no-greeting
+
+default-key  8657980D9AB51E50
+charset utf-8
+
+keyserver hkp://pgp.surfnet.nl/
+use-agent
+auto-key-locate cert pka ldap keyserver
+

@@ -1,0 +1,25 @@
+[user]
+	name = Patrick Uiterwijk
+	email = patrick@puiterwijk.org
+	signingkey = 178DCFB4151BD949D2EB087E8657980D9AB51E50
+[push]
+	default = simple
+	gpgsign = off
+[core]
+	excludesfile = /home/puiterwijk/ditfiles/gitignore
+[sendemail]
+	from = Patrick Uiterwijk <patrick@puiterwijk.org>
+	smtpEncryption = tls
+	smtpServer = smtp.office365.com
+	smtpUser = patrick@puiterwijk.org
+	smtpServerPort = 587
+[commit]
+	gpgsign = off
+[tag]
+	forceSignAnnotated = on
+[pull]
+	rebase = true
+[rebase]
+	autostash = true
+[color]
+	ui = auto

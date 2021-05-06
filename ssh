@@ -1,0 +1,27 @@
+Host *.redhat.com *.devel.redhat.com
+    User puiterwi
+
+Host bastion01.fedoraproject.org
+    User puiterwijk
+    ProxyCommand none
+    ForwardAgent no
+
+Host bastion02.fedoraproject.org
+    User puiterwijk
+    ProxyCommand none
+    ForwardAgent no
+
+Host *.iad2.fedoraproject.org *.phx2.fedoraproject.org 10.5.125.* 10.5.126.* 10.5.127.* *.vpn.fedoraproject.org *.ppc.fedoraproject.org *.arm.fedoraproject.org
+    User puiterwijk
+    ProxyCommand ssh -W %h:%p bastion01.fedoraproject.org
+
+Host *.qa.fedoraproject.org
+    User puiterwijk
+    ProxyCommand ssh -W %h:%p bastion-comm01.fedoraproject.org
+
+Host *
+    ControlMaster auto
+    ControlPath ~/.ssh/socket-%r@%h:%p
+    ControlPersist 600
+    VisualHostKey yes
+    VerifyHostKeyDNS yes

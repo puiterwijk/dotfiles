@@ -1,0 +1,11 @@
+# Manual part
+/_private
+/.fedora
+
+# Because of my environments
+/.viminfo
+/.npm
+/.bash_history
+/.pylint.d/
+/.vscode/
+.*.swp
