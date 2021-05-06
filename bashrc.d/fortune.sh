@@ -1,2 +1,5 @@
 #!/usr/bin/sh
-fortune
+if [ -f /usr/bin/fortune ];
+then
+    fortune -s >&2
+fi
