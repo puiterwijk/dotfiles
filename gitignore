@@ -9,3 +9,5 @@
 /.pylint.d/
 /.vscode/
 .*.swp
+
+/.envrc
