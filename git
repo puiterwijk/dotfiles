@@ -6,7 +6,7 @@
 	default = simple
 	gpgsign = off
 [core]
-	excludesfile = /home/puiterwijk/ditfiles/gitignore
+	excludesfile = /home/puiterwijk/dotfiles/gitignore
 [sendemail]
 	from = Patrick Uiterwijk <patrick@puiterwijk.org>
 	smtpEncryption = tls
@@ -14,7 +14,7 @@
 	smtpUser = patrick@puiterwijk.org
 	smtpServerPort = 587
 [commit]
-	gpgsign = off
+	gpgsign = on
 [tag]
 	forceSignAnnotated = on
 [pull]
