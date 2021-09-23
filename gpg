@@ -11,5 +11,6 @@ charset utf-8
 
 keyserver hkp://pgp.surfnet.nl/
 use-agent
+pinentry-mode loopback
 auto-key-locate cert pka ldap keyserver
 
