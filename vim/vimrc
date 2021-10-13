@@ -1,0 +1,14 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+
+Plug 'autozimu/LanguageClient-neovim', {
+	    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+" (Optional) Multi-entry selection UI.
+Plug 'junegunn/fzf'
+
+
+call plug#end()
