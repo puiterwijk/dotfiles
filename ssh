@@ -25,3 +25,4 @@ Host *
     ControlPersist 600
     VisualHostKey yes
     VerifyHostKeyDNS yes
+    ForwardAgent no
