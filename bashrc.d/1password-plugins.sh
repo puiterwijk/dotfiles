@@ -1,0 +1,1 @@
+/home/puiterwijk/.config/op/plugins.sh
