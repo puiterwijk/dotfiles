@@ -5,6 +5,8 @@
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBECzG5zh4+/ItCm3H+BUf5AouzbzKJL0cwH61SPvqMH
 [gpg]
 	format = ssh
+[gpg "ssh"]
+	program = "/opt/1Password/op-ssh-sign"
 [push]
 	default = simple
 	gpgsign = off
@@ -29,5 +31,4 @@
 [init]
 	defaultBranch = main
 [credential "https://github.com"]
-	helper = 
-	helper = !gh auth git-credential
+	helper = !op plugin run -- gh auth git-credential

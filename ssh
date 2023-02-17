@@ -26,3 +26,4 @@ Host *
     VisualHostKey yes
     VerifyHostKeyDNS yes
     ForwardAgent no
+    IdentityAgent ~/.1password/agent.sock
