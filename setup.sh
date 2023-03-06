@@ -9,14 +9,12 @@
 
 DF="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-rm -f ~/.rpmmacros ~/.gitconfig ~/.vimrc ~/.vim ~/.bashrc.d ~/.ssh/config
+rm -f ~/.rpmmacros ~/.gitconfig ~/.bashrc.d ~/.ssh/config
 
 mkdir -p ~/.ssh
 
 ln -rs $DF/rpmmacros ~/.rpmmacros
 ln -rs $DF/git ~/.gitconfig
-ln -rs $DF/vim/vimrc ~/.vimrc
-ln -rs $DF/vim/dot-vim/ ~/.vim
 ln -rs $DF/bashrc.d ~/.bashrc.d
 ln -rs $DF/ssh ~/.ssh/config
 ln -rs $DF/tmux.conf ~/.tmux.conf
