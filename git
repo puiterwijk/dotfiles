@@ -17,7 +17,7 @@
 	smtpUser = patrick@puiterwijk.org
 	smtpServerPort = 587
 [commit]
-	gpgsign = on
+	#gpgsign = on
 [tag]
 	forceSignAnnotated = on
 [pull]
