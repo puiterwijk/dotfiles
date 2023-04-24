@@ -2,9 +2,9 @@
 	name = Patrick Uiterwijk
 	email = patrick@puiterwijk.org
 	#signingkey = 178DCFB4151BD949D2EB087E8657980D9AB51E50
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBECzG5zh4+/ItCm3H+BUf5AouzbzKJL0cwH61SPvqMH
-[gpg]
-	format = ssh
+	#signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBECzG5zh4+/ItCm3H+BUf5AouzbzKJL0cwH61SPvqMH
+#[gpg]
+	#format = ssh
 [push]
 	default = simple
 	gpgsign = off
