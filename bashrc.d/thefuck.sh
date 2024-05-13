@@ -1,3 +1,6 @@
 #!/bin/bash
-eval $(thefuck --alias)
-alias f=fuck
+if command -v thefuck &> /dev/null
+then
+	eval $(thefuck --alias)
+	alias f=fuck
+fi
