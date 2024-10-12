@@ -47,7 +47,9 @@ function _ps1_selinux() {
 		fi
 	}
 
-	IFS=':' read -a cts </proc/thread-self/attr/current
+	#IFS=':' read -a cts </proc/thread-self/attr/current
+	cts=$(id -Z)
+	cts=(${cts//:/ })
 
 	serange=$(_merge_range "${cts[3]}" "${cts[4]}")
 
