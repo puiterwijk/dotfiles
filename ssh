@@ -6,6 +6,9 @@ Host bastion01.fedoraproject.org
     ProxyCommand none
     ForwardAgent no
 
+Host mlsvm
+	User admin
+
 Host bastion02.fedoraproject.org
     User puiterwijk
     ProxyCommand none
