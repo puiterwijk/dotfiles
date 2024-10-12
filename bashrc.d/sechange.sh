@@ -22,26 +22,35 @@ function _sechange() {
 		return 0
 	fi
 
-	options=("Personal" "Work")
+	options=("Personal" "Work" "Add security")
 	PS3="Choose an selinux mode: "
+	ADDED_CATS=""
 	select opt in "${options[@]}"
 	do
+		CAT=""
 		case $opt in
 			"Personal")
 				echo "Personal selected"
-				SEMODE="personal"
-				newrole -l s0:c1-s0:c1
-				break
+				CAT="c1"
 				;;
 			"Work")
 				echo "Work selected"
-				SEMODE="work"
-				newrole -l s0:c2-s0:c2
-				break
+				CAT="c2"
+				;;
+			"Add security")
+				echo "Adding security bit"
+				ADDED_CATS=",c3"
 				;;
 			*)
 				echo "Invalid choice"
 		esac
+
+		if [ "$CAT" != "" ];
+		then
+			CATS="$CAT$ADDED_CATS"
+			newrole -l s0:$CATS-s0:$CATS
+			break
+		fi
 	done
 	exit
 }
