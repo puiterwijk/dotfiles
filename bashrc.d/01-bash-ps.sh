@@ -11,11 +11,6 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 export ALWAYS_PRINT_SELINUX=false
 
 function _ps1_selinux() {
-	BOLD=$(tput bold)
-	RED='\033[0;31m'
-	GREEN='\033[0;32m'
-	NORMAL='\033[0m'
-
 	function _print_if_not_default() {
 		field=$1
 		curval=$2
@@ -30,7 +25,7 @@ function _ps1_selinux() {
 			fi
 			if [ "$curval" != "$normval" ];
 			then
-				echo -en "${RED}$(tput bold)$curval$(tput sgr0)${NORMAL}"
+				_warn_n "$curval"
 			else
 				echo -n "$curval"
 			fi
