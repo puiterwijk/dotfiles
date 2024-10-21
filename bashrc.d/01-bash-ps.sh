@@ -53,9 +53,9 @@ function _ps1_selinux() {
 
 	serange=$(_merge_range "${cts[3]}" "${cts[4]}")
 
-	_print_if_not_default "user" "${cts[0]}" "sysadm_u" 0
-	_print_if_not_default "role" "${cts[1]}" "sysadm_r" $?
-	_print_if_not_default "type" "${cts[2]}" "sysadm_t" $?
+	_print_if_not_default "user" "${cts[0]}" "staff_u" 0
+	_print_if_not_default "role" "${cts[1]}" "staff_r" $?
+	_print_if_not_default "type" "${cts[2]}" "staff_t" $?
 	_print_if_not_default "range" "$serange" "s0-s0:c0.c1023" $?
 }
 
