@@ -60,6 +60,7 @@ function _ps1_selinux() {
 }
 
 export PS1='\[\e]2;\u@\h:\w\a\]\[\]\D{%Y-%m-%d %H:%M:%S}\[\] \[\][\[\]\u@\h\[\]]\[\] \[\][\w]\[\] (`_ps1_selinux`)\n \[`rt=$?; if [ $rt -ne 0 ]; then echo \]🤮\[\]$rt\[; fi`\] ▸ '
+export PS1='\[\e]2;\u@\h:\w\a\]\[\]\D{%Y-%m-%d %H:%M:%S}\[\] \[\][\[\]\u@\h\[\]]\[\] \[\][\w]\[\] (`rt=$?; _ps1_selinux; printf ")\n\["; if [ $rt -ne 0 ]; then echo \]🤮\[\]$rt\[; fi`\] ▸ '
 
 export PATH="$PATH:/usr/share/doc/git-1.8.2.1/contrib/remote-helpers/"
 
