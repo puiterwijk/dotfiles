@@ -55,14 +55,19 @@ function _sechange() {
 	exit
 }
 
-if [ "$FORCE_SECHANGE" == "true" ];
+# Only enable sechange on tty's
+tty --silent
+if [ $? -eq 0 ];
 then
-	_sechange auto
-else
-	alias sechange=_sechange
-	_check_sechanged
-	if [ $? == 1 ];
+	if [ "$FORCE_SECHANGE" == "true" ];
 	then
-		_warn "NOTE: No selinux mode selected! Please run sechange!"
+		_sechange auto
+	else
+		alias sechange=_sechange
+		_check_sechanged
+		if [ $? == 1 ];
+		then
+			_warn "NOTE: No selinux mode selected! Please run sechange!"
+		fi
 	fi
 fi
