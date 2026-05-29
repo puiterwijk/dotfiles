@@ -1,0 +1,47 @@
+" set tabstop=4
+" set shiftwidth=4
+" set expandtab
+set autoindent
+set nu
+set ruler
+set incsearch
+set scrolloff=4
+set laststatus=2
+
+" Let's try this out
+set smarttab
+set colorcolumn=80
+
+autocmd! BufNewFile * silent! 0r ~/.vim/skel/tmpl.%:e
+autocmd Filetype javascript set ts=2 sts=2 sw=2
+autocmd Filetype tex set ts=2 sts=2 sw=2
+autocmd Filetype c set ts=8 noexpandtab
+autocmd Filetype golang set ts=8 noexpandtab
+autocmd Filetype python set ts=4 expandtab
+autocmd Filetype bash set ts=4 expandtab
+
+" autocmd! FileType python set foldmethod=indent
+autocmd! BufNewFile,BufRead *.md set ft=markdown
+
+set bg=dark
+set viminfo='20,<1000,s1000
+
+cmap w!! %!sudo tee > /dev/null %
+
+execute pathogen#infect()
+set nofoldenable
+let g:vim_markdown_frontmatter=1
+
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
+cnoreabbrev SC w <bar> SyntasticCheck
+cnoreabbrev SR SyntasticReset
+
+" Golang stuffs
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_autosave = 1
