@@ -18,6 +18,7 @@ ln -rs $DF/git ~/.gitconfig
 ln -rs $DF/bashrc.d ~/.bashrc.d
 ln -rs $DF/ssh ~/.ssh/config
 ln -rs $DF/tmux.conf ~/.tmux.conf
+ln -rs $DF/vim ~/.vim
 
 chmod -R 0600 ~/.ssh/*
 chmod 0700 ~/.ssh
